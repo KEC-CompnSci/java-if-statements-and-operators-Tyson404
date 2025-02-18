@@ -62,7 +62,7 @@ public class Assignment {
             return "Divisible by 3";
         } else {
             return "";
-        };
+        }
     }
 
     /**
@@ -74,12 +74,14 @@ public class Assignment {
      */
     public static String getLeapYearMessage(int year) {
         // TODO: Implement this method
-        if (year % 4 == 0) {
+        if (year % 400 == 0) {
             return "Leap Year";
-        } else if (year % 400 == 0) {
+        } else if (year % 100 == 0) {
+            return "Not Leap Year";
+        } else if (year % 4 == 0) {
             return "Leap Year";
         } else {
-            return "Not A Leap Year";
+            return "Not Leap Year";
         }
     }
 
