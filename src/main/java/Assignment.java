@@ -10,7 +10,8 @@ public class Assignment {
      */
     public static double calculateMovieNight() {
         // TODO: Implement this method
-        return 0.0;
+        double number = (12.50 * 2) + (8.00 * 3) + 7.25;
+        return number;
     }
 
     /**
@@ -21,7 +22,8 @@ public class Assignment {
      */
     public static boolean canRentCar(int age) {
         // TODO: Implement this method
-        return false;
+        boolean ageCheck = (age >= 25);
+        return ageCheck;
     }
 
     /**
@@ -32,7 +34,8 @@ public class Assignment {
      */
     public static boolean isValidPasswordLength(String password) {
         // TODO: Implement this method
-        return false;
+        boolean passwordCheck = (password.length() >= 8);
+        return passwordCheck;
     }
 
     /**
@@ -44,7 +47,8 @@ public class Assignment {
      */
     public static boolean needsOilChange(int mileage, int lastChangeMileage) {
         // TODO: Implement this method
-        return false;
+        boolean mileageCheck = ((mileage - lastChangeMileage) >= 5000);
+        return mileageCheck;
     }
 
     /**
@@ -54,7 +58,11 @@ public class Assignment {
      */
     public static String getDivisibleByThreeMessage(int number) {
         // TODO: Implement this method
-        return "";
+        if (number % 3 == 0) {
+            return "Divisible by 3";
+        } else {
+            return "";
+        };
     }
 
     /**
@@ -66,7 +74,13 @@ public class Assignment {
      */
     public static String getLeapYearMessage(int year) {
         // TODO: Implement this method
-        return "";
+        if (year % 4 == 0) {
+            return "Leap Year";
+        } else if (year % 400 == 0) {
+            return "Leap Year";
+        } else {
+            return "Not A Leap Year";
+        }
     }
 
     /**
@@ -77,6 +91,14 @@ public class Assignment {
      */
     public static String getTicketPriceCategory(int age) {
         // TODO: Implement this method
-        return "";
+        if (age < 5) {
+            return "Free";
+        } else if (age <= 12) {
+            return "Child Price";
+        } else if (age <= 21) {
+            return "Student Price";
+        } else {
+            return "Adult Price";
+        }
     }
 }
